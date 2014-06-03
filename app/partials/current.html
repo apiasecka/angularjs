@@ -1,0 +1,21 @@
+<h1>Kurs walut :)</h1>
+
+<div class="data">
+	by name: <input type="text" data-ng-model="elementName"/>
+	<table class="table table-hover">
+		<thead>
+		<tr>
+			<th><a href="" ng-click="predicate = 'name'; reverse=!reverse">Waluta</a></th>
+			<th><a href="" ng-click="predicate = '-buy'; reverse=false">Kupno</a></th>
+			<th><a href="" ng-click="predicate = 'sell'; reverse=false">Sprzedaż</a></th>
+			<th><a href="" ng-click="predicate = 'percent'; reverse=!reverse">Procent</a></th>
+		</tr>
+		</thead>
+		<tr ng-repeat="item in currency | filter:{name:elementName} | orderBy:predicate:reverse" ng-class="id_{{item.id}}">
+			<td>{{item.name}}</td>
+			<td>{{item.buy}}</td>
+			<td>{{item.sell}}</td>
+			<td>{{item.percent}}%</td>
+		</tr>
+	</table>
+</div>

@@ -1,0 +1,49 @@
+[{
+	"id":56,
+	"name": "EUR/PLN",
+	"buy":4.1549,
+	"sell":4.1494,
+	"percent":0.25
+},{
+	"id":55,
+	"name": "USD/PLN",
+	"buy":3.0490,
+	"sell":3.0440,
+	"percent":0
+},{
+	"id":2,
+	"name": "EUR/USD",
+	"buy":1.3628,
+	"sell":1.3626,
+	"percent":0.22
+},{
+	"id":100,
+	"name": "EUR/CHF",
+	"buy":1.2217,
+	"sell":1.2213,
+	"percent":-0.04
+},{
+	"id":27,
+	"name": "EUR/JPY",
+	"buy":139.69,
+	"sell":139.66,
+	"percent":0.34
+},{
+	"id":5,
+	"name": "EUR/GBP",
+	"buy":0.8138,
+	"sell":0.8133,
+	"percent":0.19
+},{
+	"id":177,
+	"name": "EUR/AUD",
+	"buy":1.4709,
+	"sell":1.4705,
+	"percent":-0.01
+},{
+	"id":305,
+	"name": "EUR/NOK",
+	"buy":8.1743,
+	"sell":8.1680,
+	"percent":0.23
+}]
