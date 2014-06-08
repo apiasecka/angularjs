@@ -1,8 +1,14 @@
-module.exports = function (socket) {
+var data = [
+    {text:'nauczyć się angulara', done:true},
+    {text:'zaliczyć BIU', done:false}
+];
 
-  setInterval(function () {
-    socket.emit('send:time', {
-      time: (new Date()).toString()
-    });
-  }, 10000);
+module.exports = function (socket) {
+	socket.emit('change', data);
+
+	socket.on('change', function(obj) {
+		console.log(obj);
+		data = obj;
+		socket.broadcast.emit('change', data);
+	});
 };

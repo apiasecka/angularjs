@@ -13,7 +13,7 @@ myApp.controller('WitajCtrl', function ($scope, $http, socket) {
 		$scope.$apply(updateCurrency);
 	}, 10000);
 	updateCurrency();
-	
+		
 	socket.on('change', function(obj) {
 		$scope.todos = obj;
 		$scope.$apply();

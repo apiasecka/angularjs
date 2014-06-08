@@ -8,27 +8,18 @@ var routes = require('./routes');
 var http = require('http');
 var path = require('path');
 
-//var privateKey  = fs.readFileSync('sslcert/server.key', 'utf8');
-//var certificate = fs.readFileSync('sslcert/server.crt', 'utf8');
-
 var app = express();
 var server = http.createServer(app);
 var io = require('socket.io').listen(server);
 
 // all environments
 app.set('port', process.env.PORT || 3000);
-/*app.use(express.json());
-app.use(express.urlencoded());
-app.use(express.methodOverride());
-app.use(express.cookieParser('superfinesecretforwedding'));
-app.use(express.session()); */
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'app')));
 
-// app.get('/', routes.index);
-app.get('/populacja', routes.populacja);
+io.set('log level', 1);
 io.sockets.on('connection', require('./routes/socket'));
 
 server.listen(app.get('port'), function(){
-  console.log('Express server listening on port ' + app.get('port'));
+	console.log('Express server listening on port ' + app.get('port'));
 });
