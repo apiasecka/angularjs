@@ -19,3 +19,18 @@
 		</tr>
 	</table>
 </div>
+
+<h1>Tablica (socket)</h1>
+
+	<span>{{remaining()}} z {{todos.length}} listy TODO</span>
+      [ <a href="" ng-click="remove()">usuń</a> ]
+      <ul>
+        <li ng-repeat="todo in todos">
+          <input type="checkbox" ng-model="todo.done" ng-change="change()">
+          <span>{{todo.text}}</span>
+        </li>
+      </ul>
+      <form ng-submit="add()">
+        <input type="text" ng-model="todoText"  size="30">
+        <input class="btn-primary" type="submit" value="add">
+      </form>

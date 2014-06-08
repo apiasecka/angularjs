@@ -1,6 +1,6 @@
 /* app css stylesheet */
 
-.ng-scope {
+body >.ng-scope, nav {
 	width: 800px;
 	margin: 0 auto;
 }
